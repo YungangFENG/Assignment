@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="com.com90041.assignment2.GameManager" x="317" y="237">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="com.com90041.assignment2.Player"
+            endpointName="playerX" kind="Simple"/>
+        <Association
+            destinationClassName="com.com90041.assignment2.Player"
+            endpointName="playerO" kind="Simple"/>
+        <Communication destinationClassName="com.com90041.assignment2.Player"/>
+    </Class>
+    <Class name="com.com90041.assignment2.Player" x="1545" y="252">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="true" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.com90041.assignment2.PlayerManager" x="638" y="711">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="true" constructors-accepted="true"/>
+        <Association
+            destinationClassName="com.com90041.assignment2.Player"
+            endpointName="playerList" kind="Simple"/>
+        <Communication destinationClassName="com.com90041.assignment2.Player"/>
+    </Class>
+    <Class name="com.com90041.assignment2.TicTacToe" x="443" y="746">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="com.com90041.assignment2.GameManager"/>
+        <Communication destinationClassName="com.com90041.assignment2.PlayerManager"/>
+    </Class>
+</ClassDiagram>

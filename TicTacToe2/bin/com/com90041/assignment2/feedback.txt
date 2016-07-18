@@ -1,0 +1,1123 @@
+============================================
+vis/result.rtx
+19:12:10_Sunday_08_May_2016
+============================================
+Feedback:
+	Your program ("TicTacToe.java") has been submitted successfully.
+
+	Compiling your program with "javac"...
+
+	Your program has been run successfully :-)
+
+	Now, it's your responsibility to test your program for correctness!
+	Here is a simple test case, and the results:
+
+============================================
+Test for input file: in1
+Expected results:				Your results:
+Welcome to Tic Tac Toe!				Welcome to Tic Tac Toe!
+
+>						>
+>The username has been used already.		>The username has been used already.
+
+>The player does not exist.			>The player does not exist.
+
+>						>
+>Are you sure you want to remove all players?	>Are you sure you want to remove all players?
+
+>The player does not exist.			>The player does not exist.
+
+>						>
+>						>
+>						>
+>The player does not exist.			>The player does not exist.
+
+>rbukater,Bukater,Rose,0 games,0 wins,0 draws	>rbukater,Bukater,Rose,0 games,0 wins,0 draws
+
+>jdawson,Dawson,Jack,0 games,0 wins,0 draws	>jdawson,Dawson,Jack,0 games,0 wins,0 draws
+rbukater,Bukater,Rose,0 games,0 wins,0 draws	rbukater,Bukater,Rose,0 games,0 wins,0 draws
+
+> WIN  | DRAW | GAME | USERNAME			> WIN  | DRAW | GAME | USERNAME
+   0% |   0% |  0   | jdawson			   0% |   0% |  0   | jdawson
+   0% |   0% |  0   | rbukater			   0% |   0% |  0   | rbukater
+
+>Player does not exist.				>Player does not exist.
+
+> | | 						> | | 
+-----						-----
+ | | 						 | | 
+-----						-----
+ | | 						 | | 
+Rose's move:					Rose's move:
+ | | 						 | | 
+-----						-----
+ |O| 						 |O| 
+-----						-----
+ | | 						 | | 
+Jack's move:					Jack's move:
+Invalid move. The cell has been occupied.	Invalid move. The cell has been occupied.
+Jack's move:					Jack's move:
+Invalid move. You must place at a cell within	Invalid move. You must place at a cell within
+Jack's move:					Jack's move:
+ | | 						 | | 
+-----						-----
+ |O| 						 |O| 
+-----						-----
+ | |X						 | |X
+Rose's move:					Rose's move:
+ | | 						 | | 
+-----						-----
+ |O|O						 |O|O
+-----						-----
+ | |X						 | |X
+Jack's move:					Jack's move:
+ | | 						 | | 
+-----						-----
+ |O|O						 |O|O
+-----						-----
+ |X|X						 |X|X
+Rose's move:					Rose's move:
+ | | 						 | | 
+-----						-----
+O|O|O						O|O|O
+-----						-----
+ |X|X						 |X|X
+Game over. Rose won!				Game over. Rose won!
+
+> WIN  | DRAW | GAME | USERNAME			> WIN  | DRAW | GAME | USERNAME
+ 100% |   0% |  1   | rbukater			 100% |   0% |  1   | rbukater
+   0% |   0% |  1   | jdawson			   0% |   0% |  1   | jdawson
+
+>Are you sure you want to reset all player st	>Are you sure you want to reset all player st
+
+> WIN  | DRAW | GAME | USERNAME			> WIN  | DRAW | GAME | USERNAME
+   0% |   0% |  0   | jdawson			   0% |   0% |  0   | jdawson
+   0% |   0% |  0   | rbukater			   0% |   0% |  0   | rbukater
+
+>						>
+
+Your results seem to be CORRECT :-).
+
+============================================
+src/Player.java
+19:12:06_Sunday_08_May_2016
+============================================
+
+
+/**
+ * 
+ * This is the player class for the TicTacToe game
+ * 
+ * @author Yungang FENG 781130
+ *
+ */
+public class Player {
+	private String username;
+	private String familyName;
+	private String givenName;
+	private int gamePlayedCount = 0;
+	private int gameWonCount = 0;
+	private int gameDrawnCount = 0;
+
+	/**
+	 * the constructor of the Player class
+	 * 
+	 * @param username
+	 *            the unique username of the player
+	 * @param familyName
+	 *            the family name of this player
+	 * @param givenName
+	 *            the given name of this player
+	 */
+	public Player(String username, String familyName, String givenName) {
+		this.username = username;
+		this.familyName = familyName;
+		this.givenName = givenName;
+	}
+
+
+	/**
+	 * @return the username
+	 */
+	public String getUsername() {
+		return username;
+	}
+
+	/**
+	 * @param username
+	 *            the username to set
+	 */
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	/**
+	 * @return the family name
+	 */
+	public String getFamilyName() {
+		return familyName;
+	}
+
+	/**
+	 * @param familyName
+	 *            the family name to set
+	 */
+	public void setFamilyName(String familyName) {
+		this.familyName = familyName;
+	}
+
+	/**
+	 * @return the given name
+	 */
+	public String getGivenName() {
+		return givenName;
+	}
+
+	/**
+	 * @param givenName
+	 *            the given name to set
+	 */
+	public void setGivenName(String givenName) {
+		this.givenName = givenName;
+	}
+
+	/**
+	 * @return the gamePlayedCount
+	 */
+	public int getGamePlayedCount() {
+		return gamePlayedCount;
+	}
+
+	/**
+	 * @param gamePlayedCount
+	 *            the gamePlayedCount to set
+	 */
+	public void setGamePlayedCount(int gamePlayedCount) {
+		this.gamePlayedCount = gamePlayedCount;
+	}
+
+	/**
+	 * @return the gameWonCount
+	 */
+	public int getGameWonCount() {
+		return gameWonCount;
+	}
+
+	/**
+	 * @param gameWonCount
+	 *            the gameWonCount to set
+	 */
+	public void setGameWonCount(int gameWonCount) {
+		this.gameWonCount = gameWonCount;
+	}
+
+	/**
+	 * @return the gameDrawnCount
+	 */
+	public int getGameDrawnCount() {
+		return gameDrawnCount;
+	}
+
+	/**
+	 * @param gameDrawnCount
+	 *            the gameDrawnCount to set
+	 */
+	public void setGameDrawnCount(int gameDrawnCount) {
+		this.gameDrawnCount = gameDrawnCount;
+	}
+
+}
+============================================
+src/RankingComparator.java
+19:12:06_Sunday_08_May_2016
+============================================
+
+
+import java.util.Comparator;
+
+public class RankingComparator implements Comparator<Player> {
+
+	public RankingComparator(){
+		
+	}
+	@Override
+	public int compare(Player player1, Player player2) {
+		double rate1;
+		double rate2;
+		double drawrate1;
+		double drawrate2;
+		if (player1.getUsername().equals(player2.getUsername()))
+			return 0;
+		if (player1.getGamePlayedCount() == 0) {
+			rate1 = 0;
+			drawrate1 = 0;
+		}
+
+		else {
+			rate1 = ((double)player1.getGameWonCount()) / player1.getGamePlayedCount();
+			drawrate1 = ((double) player1.getGameDrawnCount()) / player1.getGamePlayedCount();
+		}
+
+		if (player2.getGamePlayedCount() == 0) {
+			rate2 = 0;
+			drawrate2 = 0;
+		}
+
+		else {
+			rate2 = ((double)player2.getGameWonCount()) / player2.getGamePlayedCount();
+			drawrate2 = ((double)player2.getGameDrawnCount()) / player2.getGamePlayedCount();
+		}
+
+		if (rate1 == rate2){
+			if (drawrate1 == drawrate2)
+				return player1.getUsername().compareTo(player2.getUsername());
+			else
+				return (drawrate1 > drawrate2 ? -1: 1);
+		}
+		else
+			return (rate1 > rate2 ? -1 : 1);
+	}
+
+}
+============================================
+src/DisplayUserComparator.java
+19:12:06_Sunday_08_May_2016
+============================================
+
+import java.util.Comparator;
+
+public class DisplayUserComparator implements Comparator<Player> {
+
+	public DisplayUserComparator(){
+		
+	}
+	@Override
+	public int compare(Player player1, Player player2) {
+		return player1.getUsername().compareTo(player2.getUsername());
+	}
+
+}
+============================================
+src/PlayerManager.java
+19:12:06_Sunday_08_May_2016
+============================================
+
+
+import java.util.ArrayList;
+
+/**
+ * 
+ * This is the class which manage all players in the TicTacToe game
+ * 
+ * @author Yungang FENG 781130 
+ * 
+ */
+public class PlayerManager {
+	private static final int STATS_LIMIT = 10;
+	private ArrayList<Player> playerList;
+
+	/**
+	 * this is the constructor of this class
+	 */
+	public PlayerManager() {
+		playerList = new ArrayList<Player>();
+	}
+
+	/**
+	 * The method to add player
+	 * 
+	 * @param username
+	 *            the unique username of one user
+	 * @param familyName
+	 *            the family name of this user
+	 * @param givenName
+	 *            the given name of this user
+	 * @return the state which represents whether the player is successfully
+	 *         added
+	 */
+	public boolean addPlayer(String username, String familyName, String givenName) {
+		if (searchPlayer(username) >= 0)
+			return false;
+		Player p = new Player(username, familyName, givenName);
+		playerList.add(p);
+		return true;
+	}
+
+	/**
+	 * The method to remove all player
+	 */
+	public void removeAllPlayer() {
+		playerList.removeAll(playerList);
+	}
+
+	/**
+	 * The method to remove a player by username
+	 * 
+	 * @param username
+	 *            the user name of the player which you want to remove
+	 * @return the state which represents whether the player is successfully
+	 *         removed
+	 */
+	public boolean removePlayer(String username) {
+		int index = searchPlayer(username);
+		if (index < 0)
+			return false;
+		else {
+			playerList.remove(index);
+			return true;
+		}
+	}
+
+	/**
+	 * The method to search a user by username
+	 * 
+	 * @param username
+	 *            the user name of the player which you want to search
+	 * @return the index of this player in the player list, the negative return
+	 *         value means the player does not exist
+	 */
+	public int searchPlayer(String username) {
+		int index = 0;
+		if (playerList.isEmpty())
+			return -1;
+		for (Player player : playerList) {
+
+			if (player.getUsername().equals(username))
+				break;
+
+			index++;
+
+			if (index >= playerList.size())
+				index = -1;
+		}
+		return index;
+	}
+
+	/**
+	 * The method to get a player by username
+	 * 
+	 * @param username
+	 *            the username of the player
+	 * @return the Player instance of this player
+	 */
+	public Player getPlayer(String username) {
+		return playerList.get(searchPlayer(username));
+	}
+
+	/**
+	 * The method to edit a player
+	 * 
+	 * @param username
+	 *            the username of the player
+	 * @param familyName
+	 *            the new family name of this player
+	 * @param givenName
+	 *            the new given name of this player
+	 * @return the state which represents whether the user exists
+	 */
+	public boolean editPlayer(String username, String familyName, String givenName) {
+		int index = searchPlayer(username);
+		if (index < 0)
+			return false;
+		else {
+			playerList.get(index).setFamilyName(familyName);
+			playerList.get(index).setGivenName(givenName);
+			return true;
+		}
+	}
+
+	/**
+	 * The method to reset one user's statistics
+	 * 
+	 * @param username
+	 *            the username of this user
+	 * @return the state which represents whether the user exists
+	 */
+	public boolean resetStats(String username) {
+		if (playerList.isEmpty())
+			return true;
+		int index = searchPlayer(username);
+		if (index < 0)
+			return false;
+
+		Player player = playerList.get(index);
+		player.setGameDrawnCount(0);
+		player.setGamePlayedCount(0);
+		player.setGameWonCount(0);
+		return true;
+	}
+
+	/**
+	 * The method to reset all statistics
+	 */
+	public void resetAllStats() {
+		if (playerList.isEmpty())
+			return;
+		for (Player p : playerList) {
+			p.setGameDrawnCount(0);
+			p.setGamePlayedCount(0);
+			p.setGameWonCount(0);
+		}
+	}
+
+	/**
+	 * The method to display all players
+	 */
+	public void displayAll() {
+		
+		playerList.sort(new DisplayUserComparator());
+		if (playerList.isEmpty())
+			return;
+		for (Player player : playerList)
+			System.out.println(printStats(player));
+	}
+
+	/**
+	 * The method to display one user by his username
+	 * 
+	 * @param username
+	 *            the username of this user
+	 * @return the state which represents whether this user exists
+	 */
+	public boolean display(String username) {
+		int index = searchPlayer(username);
+		if (index < 0)
+			return false;
+		Player p = playerList.get(index);
+		System.out.println(printStats(p));
+		return true;
+	}
+
+	/**
+	 * The method to display the rankings
+	 */
+	public void displayRanking() {
+		playerList.sort(new RankingComparator());
+		/**
+		 *  if there are no more than 10 players, display all players
+		 */
+		if (playerList.size() <= STATS_LIMIT) {
+			System.out.print(" WIN  | DRAW | GAME | USERNAME\n");
+			for (Player player : playerList) {
+				int winRate = (int) (player.getGamePlayedCount() == 0 ? 0
+						: (player.getGameWonCount() * 100 / player.getGamePlayedCount()));
+				int drawnRate = (int) (player.getGamePlayedCount() == 0 ? 0
+						: (player.getGameDrawnCount() * 100 / player.getGamePlayedCount()));
+				System.out.printf(" %3d%% | %3d%% | %2d   | %s\n", 
+						winRate, drawnRate, player.getGamePlayedCount(),
+						player.getUsername());
+			}
+		}
+		/**
+		 *  if there are more than 10 players, display the first 10 players
+		 */
+		else {
+			System.out.print(" WIN  | DRAW | GAME | USERNAME\n");
+			for (int i = 0; i < STATS_LIMIT; i++) {
+				int winRate;
+				int drawnRate;
+				Player p = playerList.get(i);
+				if (playerList.get(i).getGamePlayedCount() != 0) {
+					winRate = (int) (p.getGameWonCount() * 100 / p.getGamePlayedCount());
+					drawnRate = (int) (p.getGameDrawnCount() * 100 / p.getGamePlayedCount());
+				} else {
+					winRate = 0;
+					drawnRate = 0;
+				}
+
+				System.out.printf(" %3d%% | %3d%% | %2d   | %s\n", 
+									winRate, drawnRate, p.getGamePlayedCount(),
+						p.getUsername());
+			}
+		}
+	}
+
+	/**
+	 * The private method to print the statistics
+	 * 
+	 * @param p
+	 *            the player which you want to print
+	 * @return the string of the statistics
+	 */
+	private String printStats(Player player) {
+		StringBuffer sb = new StringBuffer();
+		sb.append(player.getUsername() + ",");
+		sb.append(player.getFamilyName() + ",");
+		sb.append(player.getGivenName() + ",");
+		sb.append(player.getGamePlayedCount() + " games,");
+		sb.append(player.getGameWonCount() + " wins,");
+		sb.append(player.getGameDrawnCount() + " draws");
+		return sb.toString();
+	}
+
+}
+============================================
+src/GameManager.java
+19:12:06_Sunday_08_May_2016
+============================================
+
+
+import java.util.Scanner;
+
+/**
+ * 
+ *This is the class which manages the games
+ *
+ * @author Yungang FENG 781130
+ */
+public class GameManager {
+	/**
+	 * 2 Players
+	 */
+	private Player playerO;
+	private Player playerX;
+
+	/**
+	 * The scanner which is used to read input
+	 */
+	public Scanner keyboard;
+
+	/**
+	 * String used to create the grid
+	 */
+	private static final String GRID_LINE_1 = " | | ";
+	private static final String GRID_LINE_2 = "-----";
+
+	/**
+	 * The height and the width of the grid
+	 */
+	private static final int GRID_HEIGHT = 5;
+	private static final int GRID_WIDTH = 3;
+
+	/**
+	 * The offset to transfer the position of the piece in array 'pieces' to the
+	 * array 'grid'
+	 */
+	private static final int GRID_OFFSET = 2;
+
+	/**
+	 * The maximum count of pieces in each row and line
+	 */
+	private static final int PIECE_LINE_COUNT = 3;
+	private static final int PIECE_ROW_COUNT = 3;
+
+	/**
+	 * The flag value of the turn of playerO and playerX
+	 */
+	private static final int O_TURN = -1;
+	private static final int X_TURN = 1;
+
+	
+	private int playerTurnFlag;
+
+	/**
+	 * The flag value of the game status, including 'game can go on', 'draw',
+	 * 'playerX wins' and 'playerO wins'
+	 */
+	private static final int GAME_GO_ON = -1;
+	private static final int DRAW = 0;
+	private static final int O_WIN = 1;
+	private static final int X_WIN = 2;
+
+	/**
+	 * The indicator of the status of the game, the default value is 'game can
+	 * go on'
+	 */
+	private int winnerFlag;
+
+	/**
+	 * The counter of the steps
+	 */
+	private int stepCount;
+
+	/**
+	 * The maximum count of the steps
+	 */
+	private static final int TOTAL_STEP_COUNT = PIECE_LINE_COUNT * PIECE_ROW_COUNT;
+
+	/**
+	 * The char array which stores the grid of certain height and width. This
+	 * array also stores the character of each piece, but it is only used to
+	 * print the grid and pieces
+	 */
+	private char[][] grid;
+
+	/**
+	 * The char array which stores the position of each piece, it is used to
+	 * check the status of the game
+	 */
+	private char[][] pieces;
+
+	/**
+	 * the constructor of the class GameManager
+	 * 
+	 * @param playerO
+	 *            player O
+	 * @param playerX
+	 *            player X
+	 * @param keyboard
+	 *            scanner
+	 */
+	public GameManager(Player playerO, Player playerX, Scanner keyboard) {
+		this.playerO = playerO;
+		this.playerX = playerX;
+		this.keyboard = keyboard;
+		grid = new char[GRID_HEIGHT][GRID_WIDTH];
+		pieces = new char[PIECE_LINE_COUNT][PIECE_ROW_COUNT];
+		stepCount = 0;
+		winnerFlag = GAME_GO_ON;
+		/**
+		 * The indicator of the turn of which player, and playerO starts first
+		 */
+		playerTurnFlag = O_TURN;
+		
+		/**
+		 * initialize the grid when constructing the class
+		 */
+		initialize();
+	}
+
+	/**
+	 * the method to start a game
+	 */
+	public void playGame() {
+
+		/**
+		 * print the empty grid
+		 */
+		printGrid(grid);
+
+		/**
+		 * while the status of the game is 'can go on', then continue the game
+		 */
+		while (winnerFlag == GAME_GO_ON) {
+			if (playerTurnFlag == O_TURN)
+				System.out.println(playerO.getGivenName() + "'s move:");
+			if (playerTurnFlag == X_TURN)
+				System.out.println(playerX.getGivenName() + "'s move:");
+
+			/**
+			 * read the input of the position of the piece
+			 */
+			updateChess(keyboard.nextInt(), keyboard.nextInt());
+		}
+
+	}
+
+	/**
+	 * The function to initialize the empty grid and initialize the empty piece
+	 * array
+	 */
+	private void initialize() {
+		for (int i = 0; i < GRID_HEIGHT; i += 2)
+			grid[i] = GRID_LINE_1.toCharArray();
+		for (int i = 1; i < GRID_HEIGHT; i += 2)
+			grid[i] = GRID_LINE_2.toCharArray();
+		for (int i = 0; i < PIECE_LINE_COUNT; i++)
+			for (int j = 0; j < PIECE_ROW_COUNT; j++)
+				pieces[i][j] = ' ';
+
+	}
+
+	/**
+	 * The function to print the grid
+	 * 
+	 * @param grid
+	 *            the char array which stores the grid and the pieces
+	 */
+	private void printGrid(char[][] grid) {
+		for (char[] line : grid) {
+			for (char character : line)
+				System.out.print(character);
+			System.out.print('\n');
+		}
+	}
+
+	/**
+	 * update the grid with piece in the position which is indicated by the line
+	 * and row and print the updated grid. If the game status is changed, it
+	 * prints the new status
+	 * 
+	 * @param line
+	 *            the line position of the piece
+	 * @param row
+	 *            the row position of the piece
+	 */
+	private void updateChess(int line, int row) {
+		if (line < 0 || line > 2 || row < 0 || row > 2) {
+			System.out.println("Invalid move. You must place at a cell within {0,1,2} {0,1,2}.");
+			return;
+		}
+		if (pieces[line][row] != ' ') {
+			System.out.println("Invalid move. The cell has been occupied.");
+			return;
+		}
+
+		if (playerTurnFlag == O_TURN)
+			pieces[line][row] = 'O';
+		if (playerTurnFlag == X_TURN)
+			pieces[line][row] = 'X';
+
+		/**
+		 * increase the count of steps by 1
+		 */
+		stepCount++;
+
+		/**
+		 * update the grid with the position of the piece
+		 */
+		grid[line * GRID_OFFSET][row * GRID_OFFSET] = pieces[line][row];
+
+		/**
+		 * print the updated grid
+		 */
+		printGrid(grid);
+
+		/**
+		 * check the game state after one step, if the state is changed, print
+		 * the new state, if the game is over, update the statistics of the two
+		 * players
+		 */
+		switch (getGameState(line, row)) {
+		case X_WIN:
+			System.out.println("Game over. " + playerX.getGivenName() + " won!");
+			playerX.setGamePlayedCount(playerX.getGamePlayedCount() + 1);
+			playerX.setGameWonCount(playerX.getGameWonCount() + 1);
+			playerO.setGamePlayedCount(playerO.getGamePlayedCount() + 1);
+			keyboard.nextLine();
+			return;
+
+		case O_WIN:
+			System.out.println("Game over. " + playerO.getGivenName() + " won!");
+			playerO.setGamePlayedCount(playerO.getGamePlayedCount() + 1);
+			playerO.setGameWonCount(playerO.getGameWonCount() + 1);
+			playerX.setGamePlayedCount(playerX.getGamePlayedCount() + 1);
+			keyboard.nextLine();
+			return;
+
+		case DRAW:
+			System.out.println("Game over. It was a draw!");
+			playerO.setGamePlayedCount(playerO.getGamePlayedCount() + 1);
+			playerO.setGameDrawnCount(playerO.getGameDrawnCount() + 1);
+			playerX.setGamePlayedCount(playerX.getGamePlayedCount() + 1);
+			playerX.setGameDrawnCount(playerX.getGameDrawnCount() + 1);
+			keyboard.nextLine();
+
+			return;
+		default:
+		}
+
+		/**
+		 * change the turn of each player, since -1 indicates playerO's turn and
+		 * 1 indicates playerX's turn
+		 */
+		playerTurnFlag *= -1;
+	}
+
+	/**
+	 * get the state of the game
+	 * 
+	 * @param line
+	 *            the line position of the piece
+	 * @param row
+	 *            the row position of the piece
+	 * @return the flag value of the game state
+	 */
+	private int getGameState(int line, int row) {
+
+		/**
+		 * check if there are 3 same pieces in this line
+		 */
+		checkLine(line);
+
+		/**
+		 * check if there are 3 same pieces in this row
+		 */
+		checkRow(row);
+
+		/**
+		 * check if there are 3 same pieces in this diagonal
+		 */
+		checkDiagonal(line, row);
+
+		/**
+		 * check if the count of steps reaches the maximum number
+		 */
+		checkTotalCount();
+
+		return winnerFlag;
+	}
+
+	/**
+	 * check if there are 3 same pieces in this line
+	 * 
+	 * @param line
+	 *            the line of the position of the new piece
+	 */
+	private void checkLine(int line) {
+		char check = 0;
+		if (playerTurnFlag == O_TURN)
+			check = 'O';
+		if (playerTurnFlag == X_TURN)
+			check = 'X';
+		for (int i = 0; i < PIECE_LINE_COUNT; i++) {
+			if (pieces[line][i] != check)
+				return;
+		}
+		if (check == 'O')
+			winnerFlag = O_WIN;
+		if (check == 'X')
+			winnerFlag = X_WIN;
+	}
+
+	/**
+	 * check if there are 3 same pieces in this row
+	 * 
+	 * @param line
+	 *            the row of the position of the new piece
+	 */
+	private void checkRow(int row) {
+		char check = 0;
+		if (playerTurnFlag == O_TURN)
+			check = 'O';
+		if (playerTurnFlag == X_TURN)
+			check = 'X';
+		for (int i = 0; i < PIECE_ROW_COUNT; i++) {
+			if (pieces[i][row] != check)
+				return;
+		}
+		if (check == 'O')
+			winnerFlag = O_WIN;
+		if (check == 'X')
+			winnerFlag = X_WIN;
+	}
+
+	/**
+	 * check if there are 3 same pieces in the diagonal or the anti-diagonal
+	 * 
+	 * @param line
+	 *            the line of the position of the new piece
+	 * @param row
+	 *            the row of the position of the new piece
+	 */
+	private void checkDiagonal(int line, int row) {
+
+		char check = 0;
+		if (playerTurnFlag == O_TURN)
+			check = 'O';
+		if (playerTurnFlag == X_TURN)
+			check = 'X';
+
+		/**
+		 * check if the new piece is on the diagonal or the anti-diagonal, if
+		 * not, return
+		 */
+		if (line != row && (line + row) != PIECE_ROW_COUNT - 1)
+			return;
+
+		/**
+		 * if the new piece is on the diagonal, check the diagonal
+		 */
+		if (line == row) {
+			for (int i = 0; i < PIECE_ROW_COUNT; i++) {
+				if (pieces[i][i] != check)
+					return;
+			}
+		}
+		/**
+		 * if the new piece is on the anti-diagonal, check the anti-diagonal
+		 */
+		else {
+			for (int i = 0; i < PIECE_ROW_COUNT; i++) {
+				if (pieces[i][PIECE_ROW_COUNT - i - 1] != check)
+					return;
+			}
+		}
+
+		if (check == 'O')
+			winnerFlag = O_WIN;
+		if (check == 'X')
+			winnerFlag = X_WIN;
+	}
+
+	/**
+	 * check the count of the steps, if it reaches the maximum and no winner,
+	 * then set the state to draw
+	 */
+	private void checkTotalCount() {
+		if (winnerFlag != O_WIN && winnerFlag != X_WIN && stepCount == TOTAL_STEP_COUNT)
+			winnerFlag = DRAW;
+	}
+
+}
+============================================
+src/TicTacToe.java
+19:12:06_Sunday_08_May_2016
+============================================
+
+
+import java.util.Scanner;
+import java.util.StringTokenizer;
+
+/**
+ * 
+ * This the main class of TicTacToe
+ * 
+ * @author Yungang FENG 781130
+ *
+ */
+public class TicTacToe {
+	public static Scanner keyboard = new Scanner(System.in);
+
+	/**
+	 * The main method of TicTacToe
+	 */
+	
+	public TicTacToe(){
+		
+	}
+	
+	public static void main(String[] args) {
+		TicTacToe gameSystem = new TicTacToe();
+		gameSystem.run();
+	}
+
+	/**
+	 * the run method which maintains the game process
+	 */
+	private void run() {
+
+		System.out.println("Welcome to Tic Tac Toe!");
+		PlayerManager pm=new PlayerManager();
+
+		while (true) {
+			System.out.print("\n>");
+			String command = new String();
+			String argument = new String();
+			StringTokenizer st1 = new StringTokenizer(keyboard.nextLine(), " ");
+			if (st1.hasMoreTokens())
+				command = st1.nextToken();
+			if (st1.hasMoreTokens())
+				argument = st1.nextToken();
+
+			switch (command) {
+
+			/**
+			 * exit the program
+			 */
+			case "exit":
+				System.out.print("\n");
+				System.exit(0);
+				break;
+
+			/**
+			 * Add one player, if the username already exists, display feedback
+			 */
+			case "addplayer":
+				StringTokenizer st2 = new StringTokenizer(argument, ",");
+				String username=st2.nextToken();
+				String familyName=st2.nextToken();
+				String givenName=st2.nextToken();
+				if (!pm.addPlayer(username, familyName, givenName))
+					System.out.println("The username has been used already.");
+				break;
+
+			/**
+			 * Remove one player by username, if the username does not exist, display
+			 * feedback. If no argument, remove all players
+			 */
+			case "removeplayer":
+				if (argument.equals("")) {
+					System.out.println("Are you sure you want to remove all players? (y/n)");
+					String yesOrNo = keyboard.nextLine();
+					if (yesOrNo.equals("y")) {
+						pm.removeAllPlayer();
+					} else
+						break;
+				} else if (!pm.removePlayer(argument))
+					System.out.println("The player does not exist.");
+				break;
+
+			/**
+			 * Edit one player, if the username does not exist, display feedback
+			 */
+			case "editplayer":
+				StringTokenizer st3 = new StringTokenizer(argument, ",");
+				if (!pm.editPlayer(st3.nextToken(), st3.nextToken(), st3.nextToken()))
+					System.out.println("The player does not exist.");
+				break;
+
+			/**
+			 * Reset all statistics
+			 */
+			case "resetstats":
+				if (argument.equals("")) {
+					System.out.println("Are you sure you want to reset " + 
+									  "all player statistics? (y/n)");
+					String yesOrNo = keyboard.nextLine();
+					if (yesOrNo.equals("y")) {
+						pm.resetAllStats();
+					} else
+						break;
+				}
+
+				else if (!pm.resetStats(argument))
+					System.out.println("The player does not exist.");
+				break;
+
+			/**
+			 * Display one player, if the username does not exist, display
+			 * feedback. If there is no argument, display all players.
+			 */
+			case "displayplayer":
+				if (argument.equals("")) {
+					pm.displayAll();
+				} else if (!pm.display(argument))
+					System.out.println("The player does not exist.");
+				break;
+
+			/**
+			 * Display the rankings
+			 */
+			case "rankings":
+				pm.displayRanking();
+				break;
+
+			/**
+			 * Start a game between two players. If player does not exists,
+			 * display feedback
+			 */
+			case "playgame":
+				StringTokenizer st4 = new StringTokenizer(argument, ",");
+				String player1 = st4.nextToken();
+				String player2 = st4.nextToken();
+				if (pm.searchPlayer(player1) < 0) {
+					System.out.print("Player does not exist.\n");
+					break;
+				}
+
+				if (pm.searchPlayer(player2) < 0) {
+					System.out.print("Player does not exist.\n");
+					break;
+				}
+
+				if (player1.equals(player2)) {
+					System.out.print("Please input two different players!\n");
+					break;
+				}
+
+				Player playerO = pm.getPlayer(player1);
+				Player playerX = pm.getPlayer(player2);
+				GameManager gm = new GameManager(playerO, playerX, keyboard);
+				gm.playGame();
+				
+			/**
+			* if there is no command or command is wrong, break
+			*/
+			default:
+					break;
+			}
+		}
+	}
+
+}
